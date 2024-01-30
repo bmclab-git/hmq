@@ -9,13 +9,13 @@ const (
 )
 
 type ConnClient struct {
-	Info				`json:"info"`
-	LastMsgTime	int64		`json:"lastMsg"`
+	Info								`json:"info"`
+	LastMsgTime		int64				`json:"lastMsg"`
 }
 
 type resp struct {
-	Code	int		`json:"code,omitempty"`
-	Clients	[]ConnClient	`json:"clients,omitempty"`
+	Code			int					`json:"code,omitempty"`
+	Clients			[]ConnClient		`json:"clients,omitempty"`
 }
 
 func InitHTTPMoniter(b *Broker) {
