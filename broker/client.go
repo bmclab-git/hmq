@@ -306,6 +306,7 @@ func ProcessMessage(msg *Message) {
 	case *packets.ConnectPacket:
 	case *packets.PublishPacket:
 		packet := ca.(*packets.PublishPacket)
+		log.Debug("Recv message:", zap.String(packet.TopicName, string(packet.Payload)))
 
 		c.ProcessPublish(packet)
 	case *packets.PubackPacket:
